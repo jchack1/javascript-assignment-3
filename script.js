@@ -1,40 +1,4 @@
 
-// fetch (url)
-//     .then(x =>
-//         x.json()
-//     )
-//     .then(x =>{
-//         if (x.error) {
-//             throw x.error
-//         }
-//         x.pokemon_entries.forEach(function(obj){
-//             createHTML(obj.pokemon_species.name)
-//     })
-//     console.log(x)
-//     })
-//     .catch(err => {
-//         console.log(err)
-//     })
-// const bulbasaurUrl = "https://pokeapi.co/api/v2/pokemon/1/"
-// checking what we get in an individual pokemon object
-// fetch(bulbasaurUrl)
-// .then(x =>
-//     x.json()
-// )
-// .then(x =>{
-//     if (x.error) {
-//         throw x.error
-//     }
-// console.log(x)
-// })
-// .catch(err => {
-//     console.log(err)
-// })
-
-
-// my app
-
-
 function displayError(text){
     const section = document.querySelector("#card-container")
     const errorMessage = document.createElement("h1")
@@ -97,15 +61,6 @@ function createType(infoType, pokeType1, pokeType2, pokeName){
     return newP;
 }
 
-// function writeToPage(text) {
-//         const message = document.getElementById("message");
-//         message.id = text;
-//         message.innerHTML = text;
-//         return;
-//       }
-
-
-
 function createCard(pokeName, imageURL, idNum, pokeWeight, pokeHeight, pokeType1, pokeType2){
 
     const container = document.querySelector("#card-container");
@@ -138,7 +93,7 @@ function createCard(pokeName, imageURL, idNum, pokeWeight, pokeHeight, pokeType1
 }
     
 
-for (i = 1; i < 10 ; i++){
+for (i = 1; i < 51 ; i++){
     const pokemonUrlGeneric = "https://pokeapi.co/api/v2/pokemon/" 
     fetch(pokemonUrlGeneric + i + "/")
         .then(x => 
@@ -173,5 +128,3 @@ for (i = 1; i < 10 ; i++){
         
 }
 
-//if I want to do a sort button, could try to alphabetize by grabbing first character of the name with x.charAt(0), sort()
-//sort() default is alphabetical and ascending 
